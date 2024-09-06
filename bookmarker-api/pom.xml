@@ -117,7 +117,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!--<version>3.1.0</version>-->
 				<configuration>
 					<excludes>
 						<exclude>
@@ -125,50 +124,8 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-					<!--<image>
-						<name>bluewt129/${project.artifactId}:3.0</name>
-					</image>-->
 				</configuration>
 			</plugin>
-			<!--<plugin>
-				<groupId>io.fabric8</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.33.0</version>
-				<configuration>
-					<images>
-						<image>
-							<name>bluewt129/bookmark-api:2.0</name>
-							<build>
-								<dockerFileDir>${basedir}</dockerFileDir>
-							</build>
-						</image>
-					</images>
-				</configuration>
-				<executions>
-					<execution>
-						<id>docker-build</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>-->
-			<!--<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
-				<version>3.4.3</version>
-				<configuration>
-					<to>
-						<image>docker.io/bluewt129/${project.artifactId}</image>
-						<auth>
-							<username>bluewt129</username>
-							<password>도커 토큰 입력</password>
-						</auth>
-					</to>
-				</configuration>
-			</plugin>-->
 		</plugins>
 	</build>
-
 </project>
