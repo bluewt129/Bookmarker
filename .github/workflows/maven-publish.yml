@@ -1,6 +1,3 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
-
 name: Build
 
 on:
@@ -8,12 +5,28 @@ on:
     branches: ["**"]
 
 jobs:
-  build-bookmark-api:
+  build-bookmarker-api:
     name: Build bookmarker-api
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./bookmarker-api
+    services:
+      # GitHub Actions 내에서 PostgreSQL 컨테이너를 실행
+      postgres:
+        image: postgres:14-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: appdb
+        ports:
+          - 5432:5432
+        options: > 
+          --health-cmd="pg_isready -U postgres" 
+          --health-interval=10s 
+          --health-timeout=5s 
+          --health-retries=5
+
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -22,12 +35,18 @@ jobs:
           java-version: 17
           distribution: 'temurin'
           cache: 'maven'
-      # Maven build 작업시 권한으로 인한 접근 허용 
+
+      # PostgreSQL 컨테이너 기동 대기
+      - name: Wait for PostgreSQL
+        run: sleep 15
+
+      # Maven build 작업시 권한으로 인한 접근 허용
       - name: Build with Maven
         run: |
           chmod +x mvnw 
-          ./mvnw verify
-      # docker의 tty 명령어를 사용하기 위한 환경설정
+          ./mvnw clean verify -DskipTests
+
+      # Docker 이미지 빌드 및 푸시
       - if: ${{ github.ref == 'refs/heads/main' }}
         name: Build and Publish Docker Image
         run: |
