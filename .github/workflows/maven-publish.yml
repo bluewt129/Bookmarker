@@ -11,21 +11,6 @@ jobs:
     defaults:
       run:
         working-directory: ./bookmarker-api
-    services:
-      postgres:
-        image: postgres:14-alpine
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: appdb
-        ports:
-          - 5432:5432
-        options: > 
-          --health-cmd="pg_isready -U postgres" 
-          --health-interval=10s 
-          --health-timeout=5s 
-          --health-retries=5
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -34,18 +19,12 @@ jobs:
           java-version: 17
           distribution: 'temurin'
           cache: 'maven'
-
-      # PostgreSQL 컨테이너 기동 대기
-      - name: Wait for PostgreSQL
-        run: sleep 15
-
-      # Maven build 작업시 권한으로 인한 접근 허용
+      # Maven build 작업시 권한으로 인한 접근 허용 
       - name: Build with Maven
         run: |
           chmod +x mvnw 
-          ./mvnw clean verify -DskipTests
-
-      # Docker 이미지 빌드 및 푸시
+          ./mvnw verify
+      # docker의 tty 명령어를 사용하기 위한 환경설정
       - if: ${{ github.ref == 'refs/heads/main' }}
         name: Build and Publish Docker Image
         run: |
