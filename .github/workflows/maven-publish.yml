@@ -11,6 +11,22 @@ jobs:
     defaults:
       run:
         working-directory: ./bookmarker-api
+    services:
+      # PostgreSQL 서비스 추가
+      postgres:
+        image: postgres:14-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: appdb
+        options: > 
+          --health-cmd="pg_isready -U postgres" 
+          --health-interval=10s 
+          --health-timeout=5s 
+          --health-retries=5
+        # 포트 매핑 생략 가능 (GitHub Actions에서는 내부 네트워크로 연결되기 때문에)
+        # ports:
+        #  - 5432:5432
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
