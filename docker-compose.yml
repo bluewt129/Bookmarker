@@ -8,12 +8,13 @@ services:
       POSTGRES_DB: appdb
     ports:
       - "15432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - bookmarker-network
-
-networks:
-  bookmarker-network:
-    driver: bridge
 
   bookmarker-api:
     build:
@@ -33,7 +34,7 @@ networks:
         condition: service_healthy
     networks:
       - bookmarker-network
-  
+
   bookmarker-ui-nextjs: 
     container_name: bookmarker-ui-nextjs
     build: 
