@@ -26,8 +26,8 @@ import com.min.edu.domain.BookmarkRepository;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 @TestPropertySource(properties = {
-		 "spring.datasource.url=jdbc:tc:postgresql:14-alpine:///demo"
-		 })
+	    "spring.flyway.enabled=false"
+	})
 class BookmarkControllerTest {
 
 	@Autowired
