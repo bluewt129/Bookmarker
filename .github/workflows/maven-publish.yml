@@ -22,10 +22,10 @@ jobs:
           java-version: 17
           distribution: 'temurin'
           cache: 'maven'
-      # Maven build 작업시 권한으로 인한 접근 허용
+      # Maven build 작업시 권한으로 인한 접근 허용 
       - name: Build with Maven
         run: |
-          chmod +x mvnw
+          chmod +x mvnw 
           ./mvnw verify
       # docker의 tty 명령어를 사용하기 위한 환경설정
       - if: ${{ github.ref == 'refs/heads/main' }}
@@ -36,7 +36,7 @@ jobs:
           docker build -t myimage:latest .
           docker tag myimage:latest ${{ secrets.DOCKER_USERNAME }}/bookmarker-api:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/bookmarker-api:latest
-        env:
+        env: 
           DOCKER_BUILDKIT: 1
           DOCKER_CLI_EXPERIMENTAL: enabled
 
