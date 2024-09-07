@@ -1,6 +1,6 @@
 'use client'; // Client Component 작성방법에서 Server Component 작성방법을 적용할 때 선언함
 import { saveBookmark } from "@/app/services/api/fetchBookmarks";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 export default function AddBookmark() {
    const [title, setTitle] = useState("");
    const [url, setUrl] = useState("");

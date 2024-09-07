@@ -8,7 +8,7 @@ on:
     branches: ["**"]
 
 jobs:
-  build-bookmark-api:
+  build-bookmarker-api:
     name: Build bookmarker-api
     runs-on: ubuntu-latest
     defaults:
@@ -22,10 +22,10 @@ jobs:
           java-version: 17
           distribution: 'temurin'
           cache: 'maven'
-      # Maven build 작업시 권한으로 인한 접근 허용 
+      # Maven build 작업시 권한으로 인한 접근 허용
       - name: Build with Maven
         run: |
-          chmod +x mvnw 
+          chmod +x mvnw
           ./mvnw verify
       # docker의 tty 명령어를 사용하기 위한 환경설정
       - if: ${{ github.ref == 'refs/heads/main' }}
@@ -36,6 +36,32 @@ jobs:
           docker build -t myimage:latest .
           docker tag myimage:latest ${{ secrets.DOCKER_USERNAME }}/bookmarker-api:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/bookmarker-api:latest
-        env: 
+        env:
           DOCKER_BUILDKIT: 1
           DOCKER_CLI_EXPERIMENTAL: enabled
+
+  build-bookmarker-ui:
+    name: Build bookmarker-ui
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./bookmarker-ui-nextjs
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node.js 20.9.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.9.0
+          cache: 'yarn'
+          cache-dependency-path: bookmarker-ui-nextjs/yarn.lock
+      - name: Install dependencies
+        run: yarn
+      - name: Build
+        run: yarn build
+      - if: ${{ github.ref == 'refs/heads/main' }}
+        name: Build and Publish Docker Image
+        run: |
+          docker build -f Dockerfile.ui -t ${{ secrets.DOCKER_USERNAME }}/bookmarker-ui-nextjs .
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/bookmarker-ui-nextjs

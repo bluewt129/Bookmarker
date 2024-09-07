@@ -1,4 +1,4 @@
-import type { Bookmark, BookmarksResponse } from './../types/bookmark.d'; // 올바른 경로로 수정
+import type { Bookmark } from './../types/bookmark.d'; // 올바른 경로로 수정
 import Link from 'next/link';
  // Props 타입 정의
 interface BookmarksProps {
