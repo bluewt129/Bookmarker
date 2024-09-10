@@ -12,30 +12,35 @@
 
 ### 사용 기술 환경
 
-#### Backend
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.7-brightgreen?style=for-the-badge&logo=springboot&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-Enabled-yellow?style=for-the-badge)
-![Java](https://img.shields.io/badge/Java-17-brightgreen?style=for-the-badge&logo=java&logoColor=white)
+### Backend
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.7-white?style=for-the-badge&logo=springboot&labelColor=brightgreen&color=black)
+![JPA](https://img.shields.io/badge/JPA-Enabled-white?style=for-the-badge&labelColor=yellow&color=black)
+![Java](https://img.shields.io/badge/Java-17-white?style=for-the-badge&logo=java&labelColor=brightgreen&color=black)
 
+---
 
-#### DB
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Enabled-blue?style=for-the-badge&logo=postgresql&logoColor=white)
-![H2](https://img.shields.io/badge/H2-Enabled-lightgray?style=for-the-badge)
-![Flyway](https://img.shields.io/badge/Flyway-Enabled-red?style=for-the-badge&logo=flyway)
+### DB
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Enabled-white?style=for-the-badge&logo=postgresql&labelColor=blue&color=white)
+![H2](https://img.shields.io/badge/H2-Enabled-white?style=for-the-badge&labelColor=lightgray&color=black)
+![Flyway](https://img.shields.io/badge/Flyway-Enabled-white?style=for-the-badge&logo=flyway&labelColor=red&color=black)
 
+---
 
-#### Frontend
-![Next.js](https://img.shields.io/badge/Next.js-Enabled-black?style=for-the-badge&logo=next.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-blue?style=for-the-badge&logo=typescript&logoColor=white)
+### Frontend
+![Next.js](https://img.shields.io/badge/Next.js-Enabled-white?style=for-the-badge&logo=next.js&labelColor=black&color=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-white?style=for-the-badge&logo=typescript&labelColor=blue&color=white)
 
+---
 
-#### CI/CD
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Enabled-blue?style=for-the-badge&logo=githubactions&logoColor=white)
-![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Enabled-blue?style=for-the-badge&logo=docker&logoColor=white)
+### CI/CD
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Enabled-white?style=for-the-badge&logo=githubactions&labelColor=blue&color=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Enabled-white?style=for-the-badge&logo=docker&labelColor=blue&color=white)
 
+---
 
-#### 기타
-![Shell Script](https://img.shields.io/badge/Shell%20Script(Dockerfile)-Enabled-lightgray?style=for-the-badge&logo=shell&logoColor=white)
+### 기타
+![Shell Script](https://img.shields.io/badge/Shell%20Script(Dockerfile)-Enabled-white?style=for-the-badge&logo=shell&labelColor=lightgray&color=black)
+
 
 
 
