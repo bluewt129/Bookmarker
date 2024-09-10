@@ -12,15 +12,31 @@
 
 ### 사용 기술 환경
 
-Backend: Spring Boot 3.2.7, JPA, Java 17 <br>
+#### Backend
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.7-brightgreen?style=for-the-badge&logo=springboot&logoColor=white)
+![JPA](https://img.shields.io/badge/JPA-Enabled-yellow?style=for-the-badge)
+![Java](https://img.shields.io/badge/Java-17-brightgreen?style=for-the-badge&logo=java&logoColor=white)
 
-DB: PostgreSQL, H2, Flyway <br>
 
-Frontend: Next.js, TypeScript <br>
+#### DB
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Enabled-blue?style=for-the-badge&logo=postgresql&logoColor=white)
+![H2](https://img.shields.io/badge/H2-Enabled-lightgray?style=for-the-badge)
+![Flyway](https://img.shields.io/badge/Flyway-Enabled-red?style=for-the-badge&logo=flyway)
 
-CI/CD: GitAction, Docker Compose <br>
 
-기타: Shell Script(Dockerfile) 
+#### Frontend
+![Next.js](https://img.shields.io/badge/Next.js-Enabled-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-blue?style=for-the-badge&logo=typescript&logoColor=white)
+
+
+#### CI/CD
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Enabled-blue?style=for-the-badge&logo=githubactions&logoColor=white)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Enabled-blue?style=for-the-badge&logo=docker&logoColor=white)
+
+
+#### 기타
+![Shell Script](https://img.shields.io/badge/Shell%20Script(Dockerfile)-Enabled-lightgray?style=for-the-badge&logo=shell&logoColor=white)
+
 
 
 
