@@ -59,14 +59,3 @@ CI/CD: GitAction, Docker Compose <br>
 
 
 
-
-# Bookmarker API
-
-
-## 1. 사용자 권한 로그인
-
-
-#### 로그인 시 서버로 전송되는 값 콘솔 로그
-
-
-
