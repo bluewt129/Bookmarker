@@ -1,6 +1,6 @@
 # Bookmarker Project
-주제: Flyway를 통한 DB 버전 관리와 GitAction 및 Docker Compose를 활용한 프로젝트 배포
-기간: 2024.09.04 ~ 2024.09.10 (1주)
+주제: Flyway를 통한 DB 버전 관리와 GitAction 및 Docker Compose를 활용한 프로젝트 배포 <br>
+기간: 2024.09.04 ~ 2024.09.10 (1주) <br>
 
 
 
@@ -12,15 +12,15 @@
 
 ### 사용 기술 환경
 
-Backend: Spring Boot 3.2.7, JPA, Java 17
+Backend: Spring Boot 3.2.7, JPA, Java 17 <br>
 
-DB: PostgreSQL, H2, Flyway
+DB: PostgreSQL, H2, Flyway <br>
 
-Frontend: Next.js, TypeScript
+Frontend: Next.js, TypeScript <br>
 
-CI/CD: GitAction, Docker Compose
+CI/CD: GitAction, Docker Compose <br>
 
-기타: Shell Script(Dockerfile)
+기타: Shell Script(Dockerfile) <br>
 
 
 
