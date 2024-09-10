@@ -33,8 +33,11 @@ CI/CD: GitAction, Docker Compose
 ### 기능 구현 목록
 
 
+
+
 1. Next.js와 Spring Boot를 활용한 RESTful API 기반 북마크 관리 시스템
   -  북마크 리스트에 대한 CRUD 기능을 구현하여 사용자 편의성 제공.
+
 
 
 
@@ -43,8 +46,10 @@ CI/CD: GitAction, Docker Compose
 
 
 
+
 3. Next.js 서버 컴포넌트와 클라이언트 컴포넌트의 역할 분리
   -  Next.js에서 서버 컴포넌트와 클라이언트 컴포넌트를 분리하여, 요청 처리의 효율성을 높이고 사용자 인터페이스를 최적화.
+
 
 
 
