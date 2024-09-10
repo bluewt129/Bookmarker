@@ -34,7 +34,7 @@ CI/CD: GitAction, Docker Compose
 
 
 1. Next.js와 Spring Boot를 활용한 RESTful API 기반 북마크 관리 시스템
-  -  북마크 리스트에 대한 CRUD 기능을 구현하여 사용자 편의성 제공. <br>
+  -  북마크 리스트에 대한 CRUD 기능을 구현하여 사용자 편의성 제공. <br><br>
 
 2. Flyway를 이용한 DB 버전 관리 및 유연한 DB 환경 전환
   -  Flyway를 통해 데이터베이스 스키마의 버전 관리를 수행, 테스트, 개발, 배포 환경에 따라 DB 벤더(PostgreSQL, H2)를 유연하게 전환 및 관리.  <br><br>
