@@ -1,9 +1,9 @@
 # Bookmarker Project <br><br>
 주제: Flyway를 통한 DB 버전 관리와 GitAction 및 Docker Compose를 활용한 프로젝트 배포 <br>
-기간: 2024.09.04 ~ 2024.09.10 (1주) <br>
+기간: 2024.09.04 ~ 2024.09.10 (1주) <br><br>
 
-----------------------<br><br>
-
+----------------------
+<br><br>
 ### 사용 기술 환경
 
 Backend: Spring Boot 3.2.7, JPA, Java 17 <br>
@@ -14,10 +14,10 @@ Frontend: Next.js, TypeScript <br>
 
 CI/CD: GitAction, Docker Compose <br>
 
-기타: Shell Script(Dockerfile) <br>
+기타: Shell Script(Dockerfile) <br><br>
 
-----------------------<br><br>
-
+----------------------
+<br><br>
 ### 기능 구현 목록
 
 
@@ -39,4 +39,5 @@ CI/CD: GitAction, Docker Compose <br>
 5. GitHub Actions를 통한 CI/CD 자동화 파이프라인 구축
   -  GitHub Actions를 사용해 빌드, 테스트, 배포 과정의 자동화 구현. 지속 가능한 CI/CD 파이프라인을 구축하여 프로젝트의 효율적인 관리와 배포를 보장.  <br><br>
 
-----------------------<br><br>
+----------------------
+<br><br>
