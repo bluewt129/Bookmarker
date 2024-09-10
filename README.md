@@ -3,7 +3,7 @@
 기간: 2024.09.04 ~ 2024.09.10 (1주) <br><br>
 
 ----------------------
-<br><br>
+<br>
 ### 사용 기술 환경
 
 Backend: Spring Boot 3.2.7, JPA, Java 17 <br>
@@ -17,7 +17,7 @@ CI/CD: GitAction, Docker Compose <br>
 기타: Shell Script(Dockerfile) <br><br>
 
 ----------------------
-<br><br>
+<br>
 ### 기능 구현 목록
 
 
