@@ -1,6 +1,6 @@
 # Bookmarker Project <br>
-주제: Flyway를 통한 DB 버전 관리와 GitAction 및 Docker Compose를 활용한 프로젝트 배포 <br>
-기간: 2024.09.04 ~ 2024.09.10 (1주) 
+### 주제: Flyway를 통한 DB 버전 관리와 GitAction 및 Docker Compose를 활용한 프로젝트 배포 <br>
+### 기간: 2024.09.04 ~ 2024.09.10 (1주) 
 
 
 
